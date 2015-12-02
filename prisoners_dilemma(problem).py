@@ -207,9 +207,9 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
                 return 'c'                      #first round with opponent, collude
             elif opponent_history[-1] == 'b':
                 return 'b'
-            elif len(opponent_history) >= 2 and opponent_history[-2] == 'b': 
+            elif opponent_history[(len(opponent_history) - 2)] == 'b': 
                 return 'b'
-            elif len(opponent_history) >= 3 and opponent_history[-3] == 'b':
+            elif opponent_history[(len(opponent_history) - 3)] == 'b':
                 return 'b'
             else:
                 return 'c'
